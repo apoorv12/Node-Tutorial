@@ -3,6 +3,8 @@ const express = require('express');
 // Setting an express app
 const app = express();
 
+// Register view engine
+app.set('view engine', 'ejs');
 // listen the app
 app.listen(3000);
 app.disable('etag');
