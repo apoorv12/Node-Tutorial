@@ -14,6 +14,9 @@ app.set('view engine', 'ejs');
 app.listen(3000);
 app.disable('etag');
 
+// middleware and static file
+app.use(express.static('public'));
+
 // mongoose and mongo sandbox routes
 app.get('/add-blog', (req, res) => {
     const blog = new Blog({
